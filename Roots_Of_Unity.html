@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Roots Of Unity </title>
+		
+		<style>
+			body {
+				background-color: #AAA;
+			}
+
+			#canvas {
+				background-color: black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="canvas" width="600" height="600"></canvas> <span id="text">Coordinate of the Root of Unity: (1, 0), Exact Value: (1, 0) </span>
+
+		<input type="number" min="1" value = "3" id="num"> <button id="button">Graph</button> <br>
+
+		<button onclick="help();"> Help </button>
+
+		<script>
+			function help() {
+				alert("Roots of Unity are sets of complex numbers that when raised to the nth power produce 1. For any nth root of one there are n roots of unity that correspond with it. Roots of Unity also form regular polygons when placed on a unit circle.");
+			}
+		</script>
+
+		<a href="../Math Website.html">Back To My Site</a>
+
+		<script src="Roots_Of_Unity.js"></script>
+	</body>
+</html>
