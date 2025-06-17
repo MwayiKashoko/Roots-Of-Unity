@@ -17,9 +17,20 @@ let onRoot = false;
 
 let rootsOfUnity = [];
 
+const getMousePos = (evt) => {
+	const rect = canvas.getBoundingClientRect();
+
+	return {
+		x: (evt.clientX - rect.left) / (rect.right - rect.left) * canvas.width,
+		y: (evt.clientY - rect.top) / (rect.bottom - rect.top) * canvas.height
+	};
+}
+
 canvas.addEventListener("mousemove", function(mouse) {
+	let m = getMousePos(mouse);
+
 	for (let i = 0; i < rootsOfUnity.length; i++) {
-		rootsOfUnity[i].mouseOver(mouse.offsetX, mouse.offsetY);
+		rootsOfUnity[i].mouseOver(m.x, m.y);
 	}
 });
 
